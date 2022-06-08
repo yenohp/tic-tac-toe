@@ -1,6 +1,7 @@
 # tic-tac-toe
 1. You are going to store the gameboard as an array inside of a Gameboard objet. Players are also stored in objects.
     a. Have as little global code as possible. Rule of thumb: If you only ever need one of something (gameBoard, displayController), use a module. If you need multiple of something (players) create them with factories.
+    
 ====================================================================
         -Original object construction:
         
