@@ -3,6 +3,7 @@
     a. Have as little global code as possible. Rule of thumb: If you only ever need one of something (gameBoard, displayController), use a module. If you need multiple of something (players) create them with factories.
     
 ====================================================================
+        
         -Original object construction:
         
         function Object(arg, ...){
@@ -18,7 +19,8 @@
         const obj2 = new Object(arg2);
 
 ====================================================================
-        - Factory functions: Similar to constructors but instead of using new to create an object, the factory function sets up and returns the new object when you call the function
+       
+       - Factory functions: Similar to constructors but instead of using new to create an object, the factory function sets up and returns the new object when you call the function
         
         const factory = (arg1, ...) =>{
             const function1 = () => console.log('this is a function');
@@ -29,7 +31,8 @@
         obj1.function1();
 
 ====================================================================
-        - Module: While this looks similar to a factory function, the main distinction is that the module wraps the factory in an IIFE (Immediately Invoked Function Expression).
+       
+       - Module: While this looks similar to a factory function, the main distinction is that the module wraps the factory in an IIFE (Immediately Invoked Function Expression).
         
         const module = (() =>{
             const function1 = (x,y) => a + b;
