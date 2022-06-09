@@ -1,5 +1,15 @@
 const newGameBttn = document.querySelector('#newGameBttn');
+const closeBttn = document.querySelector('.closeBttn');
+const modal = document.querySelector('.modal');
 
+const toggleModal = () => {
+    modal.classList.toggle('showModal');
+}
+const windowOnClick = (event) => {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
 const gameBoard = (() => {
     // Create a two dimensional array
     let board = new Array(3);
@@ -26,6 +36,8 @@ const displayController = (() => {
     let board = gameBoard;
     // New Game button eventlistener creates modal for player creation
     newGameBttn.addEventListener('click', toggleModal);
+    window.addEventListener("click", windowOnClick);
+    closeBttn.addEventListener('click', toggleModal);
     // displays player names/computer
     // displays game event (victory/tie)
     // changes score
@@ -36,3 +48,4 @@ const player = (name, score) => {
     // display name -- and score?
     // increment score
 }
+
