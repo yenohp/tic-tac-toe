@@ -1,9 +1,17 @@
 const gameBoard = (() => {
     // Create a two dimensional array
-    // display empty array -- in tic-tac-toe format
-    // update via inputs
+    let board = new Array(3);
+    for (let i = 0; i < board.length; i++) {
+        board[i] = new Array(3);
+    }
+    return { board };
 })();
 
+const updateBoard = (board, inputPos) => {
+    // Identify input location based on array [[0:0,0:1,0:2],[1:0,1:1,1:2],[2:0,2:1,2:2]]
+    // Loop through board and place input into array position
+    // Return new board
+}
 const gameOver = (() => {
     // Create players based on modal inputs
     // Allow for input clicks on tic-tac-toe
@@ -13,6 +21,7 @@ const gameOver = (() => {
     // On gameOver, prompt player with rematch or reset
 })();
 const displayController = (() => {
+    let board = gameBoard;
     // New Game button eventlistener creates modal for player creation
     // displays player names/computer
     // displays game event (victory/tie)
