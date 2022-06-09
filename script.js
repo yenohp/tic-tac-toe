@@ -1,3 +1,5 @@
+const newGameBttn = document.querySelector('#newGameBttn');
+
 const gameBoard = (() => {
     // Create a two dimensional array
     let board = new Array(3);
@@ -23,6 +25,7 @@ const gameOver = (() => {
 const displayController = (() => {
     let board = gameBoard;
     // New Game button eventlistener creates modal for player creation
+    newGameBttn.addEventListener('click', toggleModal);
     // displays player names/computer
     // displays game event (victory/tie)
     // changes score
