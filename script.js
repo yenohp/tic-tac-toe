@@ -1,6 +1,7 @@
 const newGameBttn = document.querySelector('#newGameBttn');
 const closeBttn = document.querySelector('.closeBttn');
 const modal = document.querySelector('.modal');
+const form = document.querySelector('form');
 
 const toggleModal = () => {
     modal.classList.toggle('showModal');
@@ -38,11 +39,15 @@ const displayController = (() => {
     newGameBttn.addEventListener('click', toggleModal);
     window.addEventListener("click", windowOnClick);
     closeBttn.addEventListener('click', toggleModal);
+    form.addEventListener('submit', (e) => {
+
+    })
+})
     // displays player names/computer
     // displays game event (victory/tie)
     // changes score
     // updates on each input
-})();
+}) ();
 
 const player = (name, score) => {
     // display name -- and score?
