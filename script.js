@@ -40,14 +40,20 @@ const displayController = (() => {
     window.addEventListener("click", windowOnClick);
     closeBttn.addEventListener('click', toggleModal);
     form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
 
+        for (const pair of formData.entries()) {
+            console.log(`${pair[0]}, ${pair[1]}`);
+        }
+        // Turn formData into object
+        updateDisplay(formData);
     })
-})
     // displays player names/computer
     // displays game event (victory/tie)
     // changes score
     // updates on each input
-}) ();
+})();
 
 const player = (name, score) => {
     // display name -- and score?
