@@ -2,9 +2,14 @@ const newGameBttn = document.querySelector('#newGameBttn');
 const closeBttn = document.querySelector('.closeBttn');
 const modal = document.querySelector('.modal');
 const form = document.querySelector('form');
+const table = document.querySelector('table');
 
 const toggleModal = () => {
     modal.classList.toggle('showModal');
+}
+
+const toggleBoard = () => {
+    table.style.visibility = 'visible';
 }
 const windowOnClick = (event) => {
     if (event.target === modal) {
@@ -17,6 +22,8 @@ const gameBoard = (() => {
     for (let i = 0; i < board.length; i++) {
         board[i] = new Array(3);
     }
+
+
     return { board };
 })();
 
@@ -35,12 +42,15 @@ const gameOver = (() => {
 })();
 const displayController = (() => {
     let board = gameBoard;
+
     // New Game button eventlistener creates modal for player creation
     newGameBttn.addEventListener('click', toggleModal);
     window.addEventListener("click", windowOnClick);
     closeBttn.addEventListener('click', toggleModal);
+    // Hardcode assign positions in grid to values in board.
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+        toggleBoard();
         const formData = new FormData(e.target);
 
         for (const pair of formData.entries()) {
@@ -48,6 +58,8 @@ const displayController = (() => {
         }
 
     })
+
+
     // displays game event (victory/tie)
     // changes score
     // updates on each input

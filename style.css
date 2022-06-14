@@ -155,7 +155,23 @@ body {
 }
 
 /* ===================================================================================================================================== */
-#gameArea {}
+#gameArea {
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+}
+
+#tictactoe {
+    grid-area: 1/1/-1/-1;
+    visibility: hidden;
+}
+
+tr:nth-child(-n+2) {
+    border-bottom: 1px solid black;
+}
+
+td:nth-child(-n+2) {
+    border-right: 1px solid black;
+}
 
 .modal {
     position: fixed;

@@ -1,54 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>TOP | Project: Tic-Tac-Toe</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <title>TOP | Project: Tic-Tac-Toe</title>
+    </head>
 
-<body>
-    <!-- Header -->
-    <div id="header">
-        <!-- Only a new game button and logo -->
+    <body>
+        <!-- Header -->
+        <div id="header">
+            <!-- Only a new game button and logo -->
 
-    </div>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <button id="newGameBttn">+ New Game</button>
-    </div>
-    <!-- Game-Area -->
-    <div id="gameArea">
-        <!-- Modal for creating players or computer player -->
-        <div class="modal">
-            <div class="modalContent">
-                <span class="closeBttn">&times;</span>
-                <form action="">
-                    <!-- Title that indicates players i.e. Player 1 vs Player 2 -->
-                    <!-- Auto updates on name input -->
-                    <!-- Auto changes Player 2 to CPU on checkbox click -->
-                    <label for="pvc">VS Computer</label>
+        </div>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <button id="newGameBttn">+ New Game</button>
+        </div>
+        <!-- Game-Area -->
+        <div id="gameArea">
+            <!-- Table for game -->
+            <table id="tictactoe">
+                <tbody>
+                    <tr class="rowZero">
+                        <td id="zeroZero">1</td>
+                        <td id="zeroOne">2</td>
+                        <td id="zeroTwo">3</td>
+                    </tr>
 
-                    <label for="playerOne">Player 1</label>
-                    <input type="text" id="playerOne" name="playerOne" placeholder="Player 1 Name">
-                    <label for="playerTwo">Player 2</label>
-                    <input type="text" id="playerTwo" name="playerTwo" placeholder="Player 2 Name">
+                    <tr class="rowOne">
+                        <td id="oneZero">4</td>
+                        <td id="oneOne">5</td>
+                        <td id="oneTwo">6</td>
+                    </tr>
 
-                    <input type="checkbox" id="pvc" name="pvc">
-                    <input type="submit" id="submitBttn">
-                </form>
+                    <tr class="rowTwo">
+                        <td id="twoZero">7</td>
+                        <td id="twoOne">8</td>
+                        <td id="twoTwo">9</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Modal for creating players or computer player -->
+            <div class="modal">
+                <div class="modalContent">
+                    <span class="closeBttn">&times;</span>
+                    <form action="">
+                        <!-- Title that indicates players i.e. Player 1 vs Player 2 -->
+                        <!-- Auto updates on name input -->
+                        <!-- Auto changes Player 2 to CPU on checkbox click -->
+                        <label for="pvc">VS Computer</label>
+
+                        <label for="playerOne">Player 1</label>
+                        <input type="text" id="playerOne" name="playerOne" placeholder="Player 1 Name">
+                        <label for="playerTwo">Player 2</label>
+                        <input type="text" id="playerTwo" name="playerTwo" placeholder="Player 2 Name">
+
+                        <input type="checkbox" id="pvc" name="pvc">
+                        <input type="submit" id="submitBttn">
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Scoreboard -->
-    <div class="scoreboard">
+        <!-- Scoreboard -->
+        <div class="scoreboard">
 
-    </div>
-    <!-- Footer -->
-    <div id="footer"></div>
-</body>
+        </div>
+        <!-- Footer -->
+        <div id="footer"></div>
+    </body>
 
 </html>
