@@ -46,10 +46,8 @@ const displayController = (() => {
         for (const pair of formData.entries()) {
             console.log(`${pair[0]}, ${pair[1]}`);
         }
-        // Turn formData into object
-        updateDisplay(formData);
+
     })
-    // displays player names/computer
     // displays game event (victory/tie)
     // changes score
     // updates on each input
